@@ -1,0 +1,13 @@
+<h1>Chris <em>is</em> the best</h1>
+
+<% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% end %>
+
+<%= form_for @cafe, url: {action: "create"} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.submit 'GO!!!' %>
+<% end %>
